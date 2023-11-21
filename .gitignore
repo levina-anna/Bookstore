@@ -24,3 +24,7 @@ venv/
 # Базы данных
 *.sqlite3
 *.db
+
+
+# Миграции
+migrations/
