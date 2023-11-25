@@ -1,0 +1,30 @@
+{
+  "categories": [
+    {
+      "category_id": 1,
+      "category_name": "Романы",
+      "products": [
+        {"id": 1},
+        {"id": 2},
+        {"id": 3}
+      ]
+    },
+    {
+      "category_id": 2,
+      "category_name": "Детективы",
+      "products": [
+        {"id": 4},
+        {"id": 5}
+      ]
+    },
+    {
+      "category_id": 3,
+      "category_name": "Классика",
+      "products": [
+        {"id": 6},
+        {"id": 7},
+        {"id": 8}
+      ]
+    }
+  ]
+}
