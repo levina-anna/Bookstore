@@ -2,7 +2,7 @@ import json
 
 
 def get_cost() -> list:
-    # Путь к вашему файлу api.json
+    # Путь к файлу api.json
     file_path = r'D:\my_scripts\Bookstore\AdminPanel\DataTableApp\modules\cost\api.json'
 
     # Открываем файл и загружаем данные

@@ -14,13 +14,14 @@
 </head>
 <body>
 
+    <div class="container mt-4">
+        <main class="p-4">
+            {% block content %}{% endblock %}
+        </main>
+    </div>
 
-    <main>
-        {% block content %}{% endblock %}
-    </main>
-
-    <footer>
-        &copy; 2023 Мой Проект
+    <footer class="text-center">
+        &copy; 2023 <a href="https://github.com/levina-anna" class="text-decoration-none link-success">levina-anna</a>
     </footer>
 
 </body>

@@ -4,28 +4,34 @@
 {% block content %}
 
 <!-- Фильтр по категориям -->
-<form method="get">
-    <label for="category">Фильтр по категориям:</label>
-    <select name="category" id="category">
-        <option value="" {% if not selected_category %}selected{% endif %}>Все категории</option>
-        {% for category in categories %}
-            <option value="{{ category.category_id }}" {% if category.category_id == selected_category %}selected{% endif %}>
-                {{ category.category_name }}
-            </option>
-        {% endfor %}
-    </select>
-    <button type="submit">Применить</button>
-</form>
+<div class="text-end mt-3 mb-3 justify-content-end d-flex">
+    <form method="get">
+        <div class="input-group">
+            <select class="form-select" name="category" id="category">
+                <option value="" {% if not selected_category %}selected{% endif %}>Все категории</option>
+                {% for category in categories %}
+                    <option value="{{ category.category_id }}" {% if category.category_id == selected_category %}selected{% endif %}>
+                        {{ category.category_name }}
+                    </option>
+                {% endfor %}
+            </select>
+            <button type="submit" class="btn btn-primary">Применить</button>
+        </div>
+    </form>
+</div>
 
 <!-- Таблица товаров -->
-<table border="1">
-    <tr>
+<table border="1" class="table ">
+    <thead class="table-primary">
+        <tr>
         <th>ID</th>
         <th>Название</th>
         <th>Цена товара</th>
         <th>Старая цена</th>
     </tr>
-    {% for product in products %}
+    </thead>
+    <tbody class="table-secondary">
+        {% for product in products %}
         <tr>
             <td>{{ product.id }}</td>
             <td>{{ product.название }}</td>
@@ -33,6 +39,8 @@
             <td>{{ product.старая_цена }}</td>
         </tr>
     {% endfor %}
+    </tbody>
+
 </table>
 
 {% endblock %}

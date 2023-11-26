@@ -1,16 +1,13 @@
-from django.urls import reverse
-from urllib import parse
-from django.shortcuts import render, redirect
+from django.shortcuts import render
 
 
 def index(request):
     return render(request, 'DataTableApp/index.html')
 
 
-from django.shortcuts import render
-from .modules.cost import main as costs
-
 def cost_table(request):
+    from .modules.cost import main as costs
+
     # Получаем данные о товарах и категориях
     products = costs.get_cost()
     categories_data = costs.get_categories()
