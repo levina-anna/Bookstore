@@ -17,7 +17,15 @@ def cost_table(request):
 
     # Фильтруем товары по выбранной категории
     if selected_category_id:
-        filtered_products = [product for product in products if any(product['id'] in p['products'] for p in categories_data['categories'] if p['category_id'] == int(selected_category_id))]
+        filtered_products = [
+            product for product in products
+            if any(
+                product['id'] == prod['id']
+                for cat in categories_data['categories']
+                if cat['category_id'] == int(selected_category_id)
+                for prod in cat['products']
+            )
+        ]
     else:
         filtered_products = products
 
