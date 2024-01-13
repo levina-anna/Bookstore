@@ -1,11 +1,7 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Title</title>
-</head>
-<body>
+{% extends 'DataTableApp/base.html' %}
+{% block content %}
+
     <h1>Главная страница</h1>
     <a href="{% url 'cost_table' %}">Перейти к таблице</a>
-</body>
-</html>
+
+{% endblock %}
