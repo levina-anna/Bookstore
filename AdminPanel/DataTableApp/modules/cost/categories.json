@@ -2,7 +2,7 @@
   "categories": [
     {
       "category_id": 1,
-      "category_name": "Романы",
+      "category_name": "Novels",
       "products": [
         {"id": 1},
         {"id": 2},
@@ -11,7 +11,7 @@
     },
     {
       "category_id": 2,
-      "category_name": "Детективы",
+      "category_name": "Detectives",
       "products": [
         {"id": 4},
         {"id": 5}
@@ -19,7 +19,7 @@
     },
     {
       "category_id": 3,
-      "category_name": "Классика",
+      "category_name": "Classic",
       "products": [
         {"id": 6},
         {"id": 7},

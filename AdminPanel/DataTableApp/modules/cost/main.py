@@ -19,5 +19,3 @@ def get_categories() -> dict:
         categories_data = json.load(file)
 
     return categories_data
-
-

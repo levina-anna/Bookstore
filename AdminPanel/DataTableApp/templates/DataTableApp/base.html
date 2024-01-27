@@ -9,14 +9,15 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>{% block title %}Мой проект{% endblock %}</title>
+    <title>{{ title }}</title>
     <link type="text/css" href="{% static 'DataTableApp/css/styles.css' %}" rel="stylesheet">
 </head>
 <body>
 
     <div class="container mt-4">
         <main class="p-4">
-            {% block content %}{% endblock %}
+            {% block content %}
+            {% endblock %}
         </main>
     </div>
 

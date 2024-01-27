@@ -2,7 +2,11 @@ from django.shortcuts import render
 
 
 def index(request):
-    return render(request, 'DataTableApp/index.html')
+    # Передаем данные в шаблон
+    context = {
+        'title': "Main",
+    }
+    return render(request, 'DataTableApp/index.html', context)
 
 
 def cost_table(request):
@@ -31,6 +35,7 @@ def cost_table(request):
 
     # Передаем данные в шаблон
     context = {
+        'title': "Bookstore",
         'products': filtered_products,
         'categories': categories_data['categories'],
         'selected_category': int(selected_category_id) if selected_category_id else None,
