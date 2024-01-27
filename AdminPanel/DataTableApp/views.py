@@ -14,7 +14,9 @@ def cost_table(request):
 
     # Получаем данные о товарах и категориях
     products = costs.get_cost()
+    # print(f"products: {products}")
     categories_data = costs.get_categories()
+    # print(f"categories_data: {categories_data}")
 
     # Проверяем, есть ли параметр "category" в URL
     selected_category_id = request.GET.get('category')
