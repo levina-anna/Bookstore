@@ -13,8 +13,7 @@
                 <select class="form-select flex-grow-1" name="category" id="category">
                     <option value="">All categories</option>
                     {% for category in categories %}
-                    <option value="{{ category.category_id }}" {% if category.category_id== selected_category
-                            %}selected{% endif %}>
+                    <option value="{{ category.category_id }}" {% if category.category_id == selected_category %} selected {% endif %}>
                         {{ category.category_name }}
                     </option>
                     {% endfor %}
