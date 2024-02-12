@@ -14,32 +14,33 @@ def cost_table(request):
 
     # Получаем данные о товарах и категориях
     products = costs.get_cost()
-    # print(f"products: {products}")
+    print(f"products: {products}")
     categories_data = costs.get_categories()
-    # print(f"categories_data: {categories_data}")
+    print(f"categories_data: {categories_data}")
 
     # Проверяем, есть ли параметр "category" в URL
     selected_category_id = request.GET.get('category')
 
-    # Фильтруем товары по выбранной категории
+    # Если выбрана категория, фильтруем товары по этой категории
     if selected_category_id:
-        filtered_products = [
-            product for product in products
-            if any(
-                product['id'] == prod['id']
-                for cat in categories_data['categories']
-                if cat['category_id'] == int(selected_category_id)
-                for prod in cat['products']
-            )
-        ]
+        try:
+            selected_category_id = int(selected_category_id)
+            filtered_products = [
+                product for product in products
+                if product['category_id'] == selected_category_id
+            ]
+        except ValueError:
+            # Если selected_category_id не может быть преобразован в int, выводим все продукты
+            filtered_products = products
     else:
+        # Если категория не выбрана, выводим все продукты
         filtered_products = products
 
     # Передаем данные в шаблон
     context = {
         'title': "Bookstore",
         'products': filtered_products,
-        'categories': categories_data['categories'],
+        'categories': categories_data,
         'selected_category': int(selected_category_id) if selected_category_id else None,
     }
 
