@@ -6,6 +6,10 @@ making it easier to keep track of available titles and offer a seamless shopping
 
 ![Screenshot](https://github.com/levina-anna/levina-anna.github.io/raw/main/images/Bookstore.png)
 
+## API Integration
+
+- **Product and Category Data**: The application fetches and displays products and categories from the API.
+
 ## Features
 
 - **Category Filtering**: Allow customers to filter books by categories, making it effortless for them to find their
