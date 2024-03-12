@@ -1,8 +1,10 @@
 import requests
+from AdminPanel.AdminPanel.config import api_domain
+
 
 def get_cost() -> list:
     # URL API, с которого мы хотим получать данные
-    api_url = "http://127.0.0.1:8002/products_and_categories"
+    api_url = f"{api_domain}/products_and_categories"
 
     # Отправляем GET-запрос к API
     response = requests.get(api_url)
