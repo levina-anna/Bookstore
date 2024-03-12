@@ -1,5 +1,5 @@
 import requests
-from AdminPanel.AdminPanel.config import api_domain
+from config import api_domain
 
 
 def get_cost() -> list:
