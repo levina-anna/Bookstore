@@ -1,7 +1,7 @@
 # Используем образ Python
 FROM python:3.11.5
 
-# обновляю пакеты, устанавливаю нано
+# Обновляем пакеты, устанавливаем nano
 RUN pip install --upgrade pip
 RUN apt update && apt install nano
 

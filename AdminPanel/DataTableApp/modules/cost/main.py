@@ -23,7 +23,7 @@ def get_cost() -> list:
 
 def get_categories() -> list:
     # URL API, с которого получаем данные
-    api_url = "http://127.0.0.1:8002/products_and_categories"
+    api_url = f"{api_domain}/products_and_categories"
 
     try:
         # Отправляем GET-запрос к API
