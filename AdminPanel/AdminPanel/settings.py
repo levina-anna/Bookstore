@@ -1,6 +1,6 @@
 import os
 from pathlib import Path
-from config import api_domain
+from config import api_domain, debug
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
@@ -13,7 +13,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = 'django-insecure-h#-6g+!a$9mhcozq1m5euh(e#w^ij^j!j+dxz&x1wyq05d5jmk'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = debug
 
 ALLOWED_HOSTS = ['192.168.183.128', '127.0.0.1']
 API_DOMAIN = api_domain
@@ -39,7 +39,10 @@ MIDDLEWARE = [
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
+    'whitenoise.middleware.WhiteNoiseMiddleware',
 ]
+
+STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
 
 ROOT_URLCONF = 'AdminPanel.urls'
 
