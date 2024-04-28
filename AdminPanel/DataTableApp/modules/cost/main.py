@@ -17,7 +17,7 @@ def get_cost() -> list:
         return data
     else:
         # Обрабатываем возможные ошибки
-        print(f"Ошибка при получении данных из API: {response.status_code}")
+        print(f"Error getting data from API: {response.status_code}")
         return []
 
 
@@ -46,9 +46,9 @@ def get_categories() -> list:
             return unique_categories
         else:
             # В случае ошибки возвращаем пустой список
-            print(f"Ошибка при получении данных из API: {response.status_code}")
+            print(f"Error getting data from API: {response.status_code}")
             return []
     except requests.RequestException as e:
         # Логируем исключение, если что-то пошло не так
-        print(f"Произошла ошибка при подключении к API: {e}")
+        print(f"An error occurred while connecting to the API: {e}")
         return []
