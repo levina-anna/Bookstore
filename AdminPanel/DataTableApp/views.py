@@ -18,12 +18,13 @@ def cost_table(request):
 
     # Получаем данные о товарах и категориях
     products = costs.get_cost(api_url)
-    print(f"products: {products}")
+    # print(f"products: {products}")
     categories_data = costs.get_categories(api_url)
-    print(f"categories_data: {categories_data}")
+    # print(f"categories_data: {categories_data}")
 
     # Проверяем, есть ли параметр "category" в URL
     selected_category_id = request.GET.get('category')
+    print(f"selected_category_id: {selected_category_id}")
 
     # Если выбрана категория, фильтруем товары по этой категории
     if selected_category_id:

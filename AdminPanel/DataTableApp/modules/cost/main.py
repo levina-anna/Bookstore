@@ -16,7 +16,7 @@ def get_cost(api_url) -> list:
             print(f"Error getting data from API: {response.status_code}")
             return []
     except requests.RequestException as e:
-        # Логируем исключение, если что-то пошло не так
+        # Логируем исключение, если не удалось подключиться к API
         print(f"An error occurred while connecting to the API: {e}")
         return []
 
@@ -45,6 +45,6 @@ def get_categories(api_url) -> list:
             print(f"Error getting data from API: {response.status_code}")
             return []
     except requests.RequestException as e:
-        # Логируем исключение, если что-то пошло не так
+        # Логируем исключение, если не удалось подключиться к API
         print(f"An error occurred while connecting to the API: {e}")
         return []
