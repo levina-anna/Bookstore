@@ -1,4 +1,5 @@
 from django.shortcuts import render
+from config import api_domain
 
 
 def index(request):
@@ -12,10 +13,13 @@ def index(request):
 def cost_table(request):
     from .modules.cost import main as costs
 
+    # URL API, с которого мы хотим получать данные
+    api_url = f"{api_domain}/products_and_categories"
+
     # Получаем данные о товарах и категориях
-    products = costs.get_cost()
+    products = costs.get_cost(api_url)
     print(f"products: {products}")
-    categories_data = costs.get_categories()
+    categories_data = costs.get_categories(api_url)
     print(f"categories_data: {categories_data}")
 
     # Проверяем, есть ли параметр "category" в URL

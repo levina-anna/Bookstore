@@ -1,12 +1,7 @@
 import requests
-from config import api_domain
 
 
-# URL API, с которого мы хотим получать данные
-api_url = f"{api_domain}/products_and_categories"
-
-
-def get_cost() -> list:
+def get_cost(api_url) -> list:
     # Отправляем GET-запрос к API
     response = requests.get(api_url)
     try:
@@ -26,7 +21,7 @@ def get_cost() -> list:
         return []
 
 
-def get_categories() -> list:
+def get_categories(api_url) -> list:
     # Отправляем GET-запрос к API
     response = requests.get(api_url)
     try:
