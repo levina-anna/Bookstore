@@ -1,16 +1,16 @@
 # Bookstore
 
-The Bookstore is a web application designed to fetch, display, and filter book inventory data.
+The Bookstore is a web application designed to fetch, display, and filter book inventory data
 
 ![Screenshot](https://github.com/levina-anna/levina-anna.github.io/raw/main/images/Bookstore.png)
 
 ## API Integration
 
-- **Product and Category Data**: The application fetches and displays products and categories from the API.
+- **Product and Category Data**: The application fetches and displays products and categories from the API
 
 ## Features
 
-- **Category Filtering**: Filters book data by category ID.
+- **Category Filtering**: Filters book data by category ID
 
 ## Installation and Launch
 
