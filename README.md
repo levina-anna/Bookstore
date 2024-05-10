@@ -17,12 +17,8 @@ The Bookstore is a web application designed to fetch, display, and filter book i
 ```bash
 git clone <repository-url>
 cd <project-directory-name>
-# Install dependencies
-pip install -r requirements.txt
-# Apply database migrations
-python manage.py migrate
-# Run the application
-python manage.py runserver
+# Build and run the application using Docker
+docker-compose up --build
 ```
 
 ## Technologies Used
