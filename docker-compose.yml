@@ -1,0 +1,32 @@
+version: '3'
+
+services:
+  db:
+    image: annalevina/mysql-bookstore
+    environment:
+      MYSQL_ROOT_PASSWORD: 123
+      MYSQL_DATABASE: bookstore
+      MYSQL_USER: user
+      MYSQL_PASSWORD: 123
+    ports:
+      - "3307:3306"
+
+  api:
+    image: annalevina/bookstore-api:latest
+    environment:
+      DATABASE_URL: "mysql://user:123@db:3306/bookstore"
+    depends_on:
+      - db
+    ports:
+      - "8002:8000"
+
+  web:
+    build: .
+    environment:
+      BOOKSTORE_API_URL: "http://api:8000"
+    depends_on:
+      - api
+    ports:
+      - "8001:8000"
+    volumes:
+      - .:/Bookstore
