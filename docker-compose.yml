@@ -2,7 +2,7 @@ version: '3'
 
 services:
   db:
-    image: annalevina/mysql-bookstore
+    image: annalevina/mysql-bookstore:latest
     environment:
       MYSQL_ROOT_PASSWORD: 123
       MYSQL_DATABASE: bookstore
