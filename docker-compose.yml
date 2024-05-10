@@ -23,7 +23,7 @@ services:
   web:
     build: .
     environment:
-      API_DOMAIN: "http://api:8000"
+      API_DOMAIN: "http://api:8002"
       DEBUG: "True"
     ports:
       - "8001:8000"
