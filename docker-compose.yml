@@ -23,10 +23,11 @@ services:
   web:
     build: .
     environment:
-      BOOKSTORE_API_URL: "http://api:8000"
-    depends_on:
-      - api
+      API_DOMAIN: "http://api:8000"
+      DEBUG: "True"
     ports:
       - "8001:8000"
     volumes:
       - .:/Bookstore
+    depends_on:
+      - api
