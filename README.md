@@ -15,10 +15,10 @@ The Bookstore is a web application designed to fetch, display, and filter book i
 ## Installation and Launch
 
 ```bash
-git clone <repository-url>
-cd <project-directory-name>
-# Build and run the application using Docker
-docker-compose up --build
+git clone git@github.com:levina-anna/Bookstore.git
+cd Bookstore
+# Run the application using Docker
+docker-compose up -d
 ```
 
 ## Technologies Used
