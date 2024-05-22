@@ -1,9 +1,9 @@
-# Папки
+# Folders
 Lib/
 Scripts/
 share/
 
-# Файлы
+# Files
 pyvenv.cfg
 .idea/
 *.iml
@@ -13,18 +13,18 @@ __pycache__/
 .env
 
 
-# Виртуальное окружение
+# Virtual environment
 venv/
 
-# Статические и медиа файлы
+# Static and media files
 /static/
 /media/
 
 
-# Базы данных
+# Database
 *.sqlite3
 *.db
 
 
-# Миграции
+# Migrations
 migrations/
