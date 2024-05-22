@@ -3,7 +3,7 @@ from config import api_domain
 
 
 def index(request):
-    # Передаем данные в шаблон
+    # Pass data to template
     context = {
         'title': "Main",
     }
@@ -13,20 +13,20 @@ def index(request):
 def cost_table(request):
     from .modules.cost import main as costs
 
-    # URL API, с которого мы хотим получать данные
+    # API URL from which we want to receive data
     api_url = f"{api_domain}/products_and_categories"
 
-    # Получаем данные о товарах и категориях
+    # Receive data about products and categories
     products = costs.get_cost(api_url)
     # print(f"products: {products}")
     categories_data = costs.get_categories(api_url)
     # print(f"categories_data: {categories_data}")
 
-    # Проверяем, есть ли параметр "category" в URL
+    # Check if there is a "category" parameter in the URL
     selected_category_id = request.GET.get('category')
     print(f"selected_category_id: {selected_category_id}")
 
-    # Если выбрана категория, фильтруем товары по этой категории
+    # If a category is selected, filter products by this category
     if selected_category_id:
         try:
             selected_category_id = int(selected_category_id)
@@ -35,13 +35,13 @@ def cost_table(request):
                 if product['category_id'] == selected_category_id
             ]
         except ValueError:
-            # Если selected_category_id не может быть преобразован в int, выводим все продукты
+            # If selected_category_id cannot be converted to int, print all products
             filtered_products = products
     else:
-        # Если категория не выбрана, выводим все продукты
+        # If the category is not selected, display all products
         filtered_products = products
 
-    # Передаем данные в шаблон
+    # Pass data to template
     context = {
         'title': "Bookstore",
         'products': filtered_products,
