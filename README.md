@@ -14,18 +14,22 @@ The Bookstore is a web application designed to fetch, display, and filter book i
 
 ## Installation and Launch
 
+1. Clone the repository:
 ```bash
 git clone git@github.com:levina-anna/Bookstore.git
 cd Bookstore
-# Run the application using Docker
+```
+2. Launch the application using Docker:
+```
 docker-compose up -d
 ```
+3. Open the application in your browser: http://localhost:8001
 
 ## Technologies Used
 
-- Bootstrap5
-- Django 4.2.5
-- Jinja2 3.1.2
-- Python 3.11
-- HTML
-- CSS
+![Bootstrap](https://img.shields.io/badge/Bootstrap-5.0.0-7952B3?logo=bootstrap&logoColor=white&style=flat-square)
+![Django](https://img.shields.io/badge/Django-4.2.5-092E20?logo=django&logoColor=white&style=flat-square)
+![Jinja2](https://img.shields.io/badge/Jinja2-3.1.2-0C4B33?style=flat-square)
+![Python](https://img.shields.io/badge/Python-3.11-3776AB?logo=python&logoColor=white&style=flat-square)
+![HTML](https://img.shields.io/badge/HTML-E34F26?logo=html5&logoColor=white&style=flat-square)
+![CSS](https://img.shields.io/badge/CSS-1572B6?logo=css3&logoColor=white&style=flat-square)

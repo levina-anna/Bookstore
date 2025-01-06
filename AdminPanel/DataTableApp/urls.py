@@ -1,7 +1,7 @@
 from django.urls import path
-from .views import *
+from .views import IndexView, CostTableView
 
 urlpatterns = [
-    path('', index),
-    path('cost_table/', cost_table, name='cost_table'),
+    path('', IndexView.as_view(), name='index'),
+    path('cost_table/', CostTableView.as_view(), name='cost_table'),
 ]
