@@ -21,7 +21,7 @@ cd Bookstore
 ```
 2. Launch the application using Docker:
 ```
-docker-compose up -d
+docker-compose up --build
 ```
 3. Open the application in your browser: http://localhost:8001
 
